@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_login">200dp</dimen>
+    <dimen name="btn_password">200dp</dimen>
+
+    <dimen name="bar">50dp</dimen>
+
+    <dimen name="bar_title_letter_spacing">0.2</dimen>
+    <dimen name="bar_title_text_size">17sp</dimen>
+    <dimen name="label_text_size">15sp</dimen>
+    <dimen name="bar_title_icon_margin">38dp</dimen>
+
+
+
+    <!--侧滑菜单-->
+    <dimen name="main_right_margin_horizontal">4dp</dimen>
+
+    <!--trash item-->
+    <dimen name="trash_item_margin">5dp</dimen>
+    <dimen name="trash_item_icon_size">22dp</dimen>
+</resources>

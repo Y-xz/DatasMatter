@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/login_et_phoneNumber"
+        android:background="@null"
+        android:layout_width="@dimen/btn_login"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/login_v_line"
+        android:inputType="phone"
+        android:hint="手机号"/>
+    <View
+        android:id="@+id/login_v_line"
+        android:layout_width="@dimen/btn_login"
+        android:layout_height="1dp"
+        android:layout_above="@id/login_et_password"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorGrey21"/>
+    <EditText
+        android:id="@+id/login_et_password"
+        android:background="@null"
+        android:layout_width="@dimen/btn_password"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_centerInParent="true"
+        android:inputType="textPassword"
+        android:hint="密码"/>
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:background="@color/material_blueGrey_900"
+        android:layout_below="@id/login_et_password"
+        android:textColor="#fff"
+        android:text="登录"/>
+
+    <Button
+        android:id="@+id/login_btn_forgetPassword"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_btn_login"
+        android:layout_alignLeft="@id/login_btn_login"
+
+        android:text="忘记密码?"/>
+    <Button
+        android:id="@+id/login_btn_register"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_btn_login"
+        android:layout_alignRight="@id/login_btn_login"
+        android:text="新用户注册"/>
+
+
+</RelativeLayout>

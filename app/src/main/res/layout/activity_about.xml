@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrashActivity">
+
+    <!--标题栏-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/about_layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--返回-->
+            <ImageButton
+                android:id="@+id/about_btn_return"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/material_blueGrey_800"
+                android:textStyle="normal"
+                android:textSize="@dimen/bar_title_text_size"
+                android:letterSpacing="0.2"
+                android:text="关于"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <!--标题栏-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/material_grey_500"
+        android:text="©版权所有：袁光正,王毅\n\n老A之家工作室"/>
+</RelativeLayout>

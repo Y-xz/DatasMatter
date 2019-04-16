@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TrashActivity"
+    android:background="@color/pageBackground">
+
+        <!--标题栏-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/trash_layout_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--返回-->
+                <ImageButton
+                    android:id="@+id/trash_btn_return"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/material_blueGrey_800"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/bar_title_text_size"
+                    android:letterSpacing="0.2"
+                    android:text="回收站"
+                    />
+
+                <ImageButton
+                    android:id="@+id/trash_btn_clear"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/empty"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <!--标题栏-->
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/trash_layout_ref"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/trash_layout_bar"
+            app:srlEnablePreviewInEditMode="false">
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.scwang.smartrefresh.layout.header.ClassicsHeader>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/trash_view_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <ImageView
+            android:id="@+id/trash_iv_list_null"
+            android:layout_width="137dp"
+            android:layout_height="128dp"
+            android:background="@drawable/list_null"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+</RelativeLayout>

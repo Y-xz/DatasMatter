@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/reg_et_phoneNumber"
+        android:background="@null"
+        android:layout_width="@dimen/btn_login"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/reg_v_line"
+        android:inputType="phone"
+        android:hint="手机号"/>
+    <View
+        android:id="@+id/reg_v_line"
+        android:layout_width="@dimen/btn_login"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorGrey21"/>
+    <LinearLayout
+        android:id="@+id/reg2_layout_vercode"
+        android:layout_width="@dimen/btn_login"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/reg_v_line"
+        android:gravity="bottom">
+        <EditText
+            android:id="@+id/reg_et_vercode"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:hint="验证码"/>
+        <Button
+            android:id="@+id/reg_btn_getcode"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_below="@id/reg_et_vercode"
+            android:text="获取验证码"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reg_btn_next"
+        android:layout_width="@dimen/btn_login"
+        android:layout_height="wrap_content"
+        android:background="@color/material_blueGrey_900"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/reg2_layout_vercode"
+        android:textColor="#fff"
+        android:text="下一步"/>
+
+</RelativeLayout>

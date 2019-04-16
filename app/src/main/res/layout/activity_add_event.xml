@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/material_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--标题栏-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/add_event_layout_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--返回-->
+                <ImageButton
+                    android:id="@+id/add_event_btn_return"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClickReturn"
+                    android:background="@drawable/back"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/label_text_color"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/bar_title_text_size"
+                    android:letterSpacing="0.2"
+                    android:text="添加事件"
+                    />
+
+                <ImageButton
+                    android:id="@+id/add_event_btn_upload"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/upload"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+<!--标题栏-->
+
+    <LinearLayout
+        android:id="@+id/add_event_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/add_event_layout_bar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/label_text_color"
+            android:textSize="@dimen/label_text_size"
+            android:text="标题："/>
+        <!--更换成可边长的-->
+        <EditText
+            android:id="@+id/add_event_et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:hint="输入事件的标题"/>
+    </LinearLayout>
+<!--类型-->
+    <RelativeLayout
+        android:id="@+id/add_event_layout_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_event_layout_title"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/label_text_color"
+            android:textSize="@dimen/label_text_size"
+            android:text="类型："/>
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/add_event_ns_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/pageBackground"
+            app:arrowTint="@color/material_blueGrey_900"
+            app:textTint="@color/material_blueGrey_400"
+            />
+
+    </RelativeLayout>
+        <!--重要等级-->
+    <RelativeLayout
+        android:id="@+id/add_event_layout_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_event_layout_type">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/label_text_color"
+            android:textSize="@dimen/label_text_size"
+            android:text="重要等级"/>
+        <RadioGroup
+            android:id="@+id/add_event_rg_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+            <RadioButton
+                android:id="@+id/add_event_rb_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/material_grey_200"
+                android:background="@color/material_red_300"/>
+            <RadioButton
+                android:id="@+id/add_event_rb_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/material_grey_200"
+                android:background="@color/material_orange_500"/>
+            <RadioButton
+                android:id="@+id/add_event_rb_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/material_grey_200"
+                android:background="@color/material_yellow_600"/>
+            <RadioButton
+                android:id="@+id/add_event_rb_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/material_grey_200"
+                android:background="@color/material_blue_300"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/add_event_rb_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/material_grey_200"
+                android:background="@color/material_green_200" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_event_layout_happendate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_event_layout_grade">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/label_text_color"
+            android:textSize="@dimen/label_text_size"
+            android:text="发生时间："/>
+        <Button
+            android:id="@+id/add_event_btn_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="happenDate"
+
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/add_event_layout_remakes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_event_layout_happendate"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/label_text_color"
+            android:textSize="@dimen/label_text_size"
+            android:text="备注："/>
+        <android.support.v7.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@color/material_blueGrey_50"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="4dp"
+            android:layout_margin="6dp">
+            <EditText
+                android:id="@+id/add_event_et_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:minLines="7"
+                android:hint="可以添加一些备注哦~"/>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+ </RelativeLayout>
+
+
+</RelativeLayout>
